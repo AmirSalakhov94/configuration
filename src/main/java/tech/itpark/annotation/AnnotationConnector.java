@@ -1,7 +1,6 @@
 package tech.itpark.annotation;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import tech.itpark.connector.Connector;
@@ -17,7 +16,7 @@ public class AnnotationConnector implements Connector {
 
     public AnnotationConnector(@Value("${login}") String login,
                                @Value("${password}") String password,
-                               @Autowired DataSource annotationDataSource) {
+                               DataSource annotationDataSource) {
         this.login = login;
         this.password = password;
         this.dataSource = annotationDataSource;
